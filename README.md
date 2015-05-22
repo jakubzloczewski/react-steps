@@ -1,5 +1,6 @@
 # react-steps
 Steps component for react
+
 Demo : http://jakubzloczewski.github.io/react-steps/
 
 ## Instructions
