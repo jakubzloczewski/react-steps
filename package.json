@@ -1,0 +1,36 @@
+{
+  "name": "react-steps",
+  "version": "0.0.3",
+  "description": "Steps component for react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakubzloczewski/react-steps.git"
+  },
+  "author": "Jakub Złoczewski <jzlocz@gmail.com> (https://github.com/jakubzloczewski)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakubzloczewski/react-steps/issues"
+  },
+  "homepage": "https://github.com/jakubzloczewski/react-steps#readlsme",
+  "peerDependencies": {
+    "react": ">=0.13"
+  },
+  "devDependencies": {
+    "babel-core": "^5.4.7",
+    "babel-loader": "^5.1.3",
+    "css-loader": "^0.13.1",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
+    "node-libs-browser": "^0.5.2",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.12.2",
+    "webpack": "^1.9.8"
+  },
+  "dependencies": {
+    "radium": "^0.12.2"
+  }
+}
