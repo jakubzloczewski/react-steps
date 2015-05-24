@@ -18,7 +18,7 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                loader: 'babel'
+                loader: 'babel-loader?stage=1'
             }
         ]
     }
