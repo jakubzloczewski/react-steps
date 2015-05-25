@@ -338,8 +338,7 @@
 
 	var style = {
 	    item: {
-	        alignItems: 'center',
-	        justifyContent: 'center',
+	        display: 'inline-block',
 	        margin: '0.5em'
 	    },
 	    itemFlat: {
