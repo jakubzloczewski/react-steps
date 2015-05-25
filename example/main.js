@@ -79,6 +79,16 @@ class App extends React.Component {
                     <Code>{"<Steps items={data} type={'circle'} flat={true}/>"}</Code>
                     <Steps items={data} type={'circle'} flat={true}/>
                 </Example>
+
+                <Example>
+                    <Code>{"<Steps items={data} type={'point'}/>"}</Code>
+                    <Steps items={data} type={'point'}/>
+                </Example>
+
+                <Example>
+                    <Code>{"<Steps items={data} type={'point'} flat={true}/>"}</Code>
+                    <Steps items={data} type={'point'} flat={true}/>
+                </Example>
             </div>
         );
     }

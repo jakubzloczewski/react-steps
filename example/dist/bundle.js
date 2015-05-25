@@ -199,6 +199,26 @@
 	                        '<Steps items={data} type={\'circle\'} flat={true}/>'
 	                    ),
 	                    _react2['default'].createElement(_libIndexJs2['default'], { items: data, type: 'circle', flat: true })
+	                ),
+	                _react2['default'].createElement(
+	                    Example,
+	                    null,
+	                    _react2['default'].createElement(
+	                        Code,
+	                        null,
+	                        '<Steps items={data} type={\'point\'}/>'
+	                    ),
+	                    _react2['default'].createElement(_libIndexJs2['default'], { items: data, type: 'point' })
+	                ),
+	                _react2['default'].createElement(
+	                    Example,
+	                    null,
+	                    _react2['default'].createElement(
+	                        Code,
+	                        null,
+	                        '<Steps items={data} type={\'point\'} flat={true}/>'
+	                    ),
+	                    _react2['default'].createElement(_libIndexJs2['default'], { items: data, type: 'point', flat: true })
 	                )
 	            );
 	        }
@@ -12038,6 +12058,10 @@
 
 	var _typesBasicJs2 = _interopRequireDefault(_typesBasicJs);
 
+	var _typesPointJs = __webpack_require__(174);
+
+	var _typesPointJs2 = _interopRequireDefault(_typesPointJs);
+
 	var style = {
 	    main: {
 	        display: 'block',
@@ -12066,9 +12090,14 @@
 	            var flat = _props.flat;
 	            var type = _props.type;
 
-	            var items = this.props.items.map(function (item, idx) {
+	            var items = this.props.items.map(function (item, idx, list) {
 	                if (type === 'circle') {
 	                    return _react2['default'].createElement(_typesCircleJs2['default'], { key: idx, item: item, flat: flat, idx: idx });
+	                } else if (type === 'point') {
+	                    return _react2['default'].createElement(_typesPointJs2['default'], { key: idx, item: item, flat: flat, idx: idx,
+	                        isFirst: idx === 0,
+	                        isLast: idx === list.length - 1,
+	                        style: { width: 100 / list.length + '%' } });
 	                } else {
 	                    return _react2['default'].createElement(_typesBasicJs2['default'], { key: idx, item: item, flat: flat, idx: idx });
 	                }
@@ -19688,6 +19717,177 @@
 
 	// IE < 9 does not support Array#slice on collections objects
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)))
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Radium = __webpack_require__(6);
+
+	var _Radium2 = _interopRequireDefault(_Radium);
+
+	var size = 30;
+	var border = '1px solid rgba(100,100,100,0.2)';
+	var outlineSize = 8;
+
+	var styles = {
+	    item: {
+	        position: 'relative',
+	        textAlign: 'center',
+	        display: 'inline-block',
+	        margin: '0.5em 0'
+	    },
+	    itemFlat: {
+	        background: '#7d7e7d'
+	    },
+	    activeItemNumber: {
+	        background: 'linear-gradient(to bottom, #f9c667 0%,#f79621 100%)'
+	    },
+	    activeFlatItemNumber: {
+	        background: '#F8A50A'
+	    },
+	    doneItemNumber: {
+	        background: 'linear-gradient(to bottom, #a4b357 0%,#75890c 100%)'
+	    },
+	    doneFlatItemNumber: {
+	        background: '#81941F'
+	    },
+	    arrow: {
+	        marginBottom: '-5px'
+	    },
+	    number: {
+	        position: 'relative',
+	        display: 'inline-block',
+	        top: outlineSize / 2,
+	        height: size,
+	        width: size,
+	        borderRadius: size,
+	        lineHeight: size + 'px',
+	        textAlign: 'center',
+	        background: 'linear-gradient(to bottom, #7d7e7d 20%,#565656 100%)',
+	        textShadow: 'rgba(0, 0, 0, 0.3) 1px 1px 0px',
+	        boxShadow: '0px 1px 5px rgba(0,0,0,0.2)'
+	    },
+	    text: {
+	        color: '#706D6D',
+	        fontWeight: 700,
+	        fontSize: '0.7em',
+	        padding: '0.5em'
+	    },
+	    status: {
+	        color: '#706D6D',
+	        fontWeight: 700,
+	        fontSize: '0.8em',
+	        padding: '0.1em'
+	    },
+	    outline: {
+	        boxShadow: 'inset 0px 1px 0px 0px rgba(200,200,200,0.2),inset 0px 2px 0px 0px rgba(200,200,200,0.1)',
+	        display: 'block',
+	        position: 'absolute',
+	        zIndex: 1,
+	        width: '100%',
+	        top: 10,
+	        height: 9,
+	        borderTop: border,
+	        borderBottom: border
+	    },
+	    numberOutline: {
+	        position: 'relative',
+	        zIndex: 2,
+	        boxShadow: 'inset 0px 1px 0px 0px  rgba(200,200,200,0.3),' + 'inset 0px 2px 0px 0px  rgba(200,200,200,0.2),' + 'inset 0px -1px 0px 0px rgba(200,200,200,0.3),' + 'inset 0px -2px 0px 0px rgba(200,200,200,0.2)',
+	        background: '#fff',
+	        display: 'inline-block',
+	        textAlign: 'center',
+	        height: size + outlineSize,
+	        width: size + outlineSize,
+	        left: 'auto',
+	        right: 'auto',
+	        marginLeft: -(outlineSize / 2),
+	        marginTop: -(outlineSize / 2),
+	        borderRadius: size + outlineSize
+	    },
+	    outlineFirst: {
+	        borderLeft: border,
+	        borderBottomLeftRadius: 9,
+	        borderTopLeftRadius: 9
+	    },
+	    outlineLast: {
+	        borderRight: border,
+	        borderBottomRightRadius: 9,
+	        borderTopRightRadius: 9
+	    }
+	};
+
+	var Point = (function (_React$Component) {
+	    function Point() {
+	        _classCallCheck(this, _Point);
+
+	        if (_React$Component != null) {
+	            _React$Component.apply(this, arguments);
+	        }
+	    }
+
+	    _inherits(Point, _React$Component);
+
+	    var _Point = Point;
+
+	    _createClass(_Point, [{
+	        key: 'render',
+	        value: function render() {
+	            var _props = this.props;
+	            var item = _props.item;
+	            var flat = _props.flat;
+	            var idx = _props.idx;
+	            var isFirst = _props.isFirst;
+	            var isLast = _props.isLast;
+	            var style = _props.style;
+
+	            return _react2['default'].createElement(
+	                'div',
+	                { style: [styles.item, style] },
+	                _react2['default'].createElement('div', { style: [styles.outline, isFirst && styles.outlineFirst, isLast && styles.outlineLast] }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { style: [styles.numberOutline] },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { style: [styles.number, flat && styles.itemFlatNumber, item.isActive && (flat ? styles.activeFlatItemNumber : styles.activeItemNumber), item.isDone && (flat ? styles.doneFlatItemNumber : styles.doneItemNumber)] },
+	                        idx + 1
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { style: styles.text },
+	                    item.text
+	                )
+	            );
+	        }
+	    }]);
+
+	    Point = _Radium2['default'].Enhancer(Point) || Point;
+	    return Point;
+	})(_react2['default'].Component);
+
+	exports['default'] = Point;
+	module.exports = exports['default'];
 
 /***/ }
 /******/ ]);
