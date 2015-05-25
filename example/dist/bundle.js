@@ -485,7 +485,8 @@
 	        borderRadius: '0.4em',
 	        background: 'linear-gradient(to bottom, #7d7e7d 20%,#565656 100%)',
 	        boxShadow: '0px 1px 5px rgba(0,0,0,0.2)',
-	        textShadow: 'rgba(0, 0, 0, 0.3) 1px 1px 0px'
+	        textShadow: 'rgba(0, 0, 0, 0.3) 1px 1px 0px',
+	        whiteSpace: 'nowrap'
 	    },
 	    itemFlat: {
 	        background: '#7d7e7d'
