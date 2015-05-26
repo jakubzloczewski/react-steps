@@ -1,8 +1,8 @@
 {
   "name": "react-steps",
-  "version": "0.0.3c",
+  "version": "0.0.3-d",
   "description": "Steps component for react",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/jakubzloczewski/react-steps.git"
   },
-  "author": "Jakub Złoczewski <jzlocz@gmail.com> (https://github.com/jakubzloczewski)",
+  "author": {
+    "name": "Jakub Złoczewski",
+    "email": "jzlocz@gmail.com",
+    "url": "https://github.com/jakubzloczewski"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jakubzloczewski/react-steps/issues"
@@ -27,5 +31,11 @@
   },
   "dependencies": {
     "radium": "^0.12.2"
-  }
+  },
+  "readme": "# react-steps\r\nSteps component for react\r\n\r\nDemo : http://jakubzloczewski.github.io/react-steps/\r\n\r\n## Instructions\r\n\r\nTo install this module run:\r\n```sh\r\nnpm install react-steps\r\n```\r\n\r\nrequire it inside of your app\r\n```js\r\nvar Steps = require('react-steps');\r\n```\r\n\r\nto compile example with webpack\r\n\r\n```sh\r\nwebpack\r\n```\r\n\r\nTu run example localy just open ./example/index.html in browser\r\n",
+  "readmeFilename": "README.md",
+  "gitHead": "58a0c759fc030f1e5bcf58a1b908931a81b9766e",
+  "_id": "react-steps@0.0.3-c",
+  "_shasum": "8da54945d1c952cab273d0d663f6970c7f26b7e4",
+  "_from": "react-steps@0.0.3-c"
 }
