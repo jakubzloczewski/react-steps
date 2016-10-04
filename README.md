@@ -18,7 +18,7 @@ var Steps = require('react-steps');
 to compile example with webpack
 
 ```sh
-webpack
+npm run build && npm run buildExample
 ```
 
 Tu run example localy just open ./example/index.html in browser
