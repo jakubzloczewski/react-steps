@@ -1,0 +1,102 @@
+@size: 30px;
+@border: 1px solid rgba(100, 100, 100, 0.2);
+@outlineSize: 8px;
+
+.item {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin: 0.5em 0;
+}
+
+.itemFlat {
+  background: #7d7e7d;
+}
+
+.number {
+  position: relative;
+  display: inline-block;
+  top: @outlineSize / 2;
+  height: @size;
+  width: @size;
+  border-radius: @size;
+  line-height: @size;
+  text-align: center;
+  background: linear-gradient(to bottom, #7d7e7d 20%, #565656 100%);
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.activeItemNumber {
+  background: linear-gradient(to bottom, #f9c667 0%, #f79621 100%);
+}
+
+.activeFlatItemNumber {
+  background: #F8A50A;
+}
+
+.doneItemNumber {
+  background: linear-gradient(to bottom, #a4b357 0%, #75890c 100%);
+}
+
+.doneFlatItemNumber {
+  background: #81941F;
+}
+
+.arrow {
+  margin-bottom: -5px;
+}
+
+.text {
+  color: #706D6D;
+  font-weight: 700;
+  font-size: 0.7em;
+  padding: 0.5em;
+}
+
+.status {
+  color: #706D6D;
+  font-weight: 700;
+  font-size: 0.8em;
+  padding: 0.1em;
+}
+
+.outline {
+  box-shadow: inset 0 1px 0 0 rgba(200, 200, 200, 0.2), inset 0 2px 0 0 rgba(200, 200, 200, 0.1);
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 10px;
+  height: 9px;
+  border-top: @border;
+  border-bottom: @border;
+}
+
+.numberOutline {
+  position: relative;
+  z-index: 2;
+  box-shadow: inset 0 1px 0 0 rgba(200, 200, 200, 0.3), inset 0 2px 0 0 rgba(200, 200, 200, 0.2), inset 0 -1px 0 0 rgba(200, 200, 200, 0.3), inset 0 -2px 0 0 rgba(200, 200, 200, 0.2);
+  background: #fff;
+  display: inline-block;
+  text-align: center;
+  height: @size + @outlineSize;
+  width: @size + @outlineSize;
+  left: auto;
+  right: auto;
+  margin-left: -(@outlineSize / 2);
+  margin-top: -(@outlineSize / 2);
+  border-radius: @size + @outlineSize;
+}
+
+.outlineFirst {
+  border-left: @border;
+  border-bottom-left-radius: 9px;
+  border-top-left-radius: 9px;
+}
+
+.outlineLast {
+  border-right: @border;
+  border-bottom-right-radius: 9px;
+  border-top-right-radius: 9px;
+}

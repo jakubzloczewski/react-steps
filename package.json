@@ -1,10 +1,11 @@
 {
   "name": "react-steps",
-  "version": "0.0.3-d",
+  "version": "0.0.4",
   "description": "Steps component for react",
-  "main": "lib/index.js",
+  "main": "dist/react-steps.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "buildExample": "webpack --config webpack.config.example.js"
   },
   "repository": {
     "type": "git",
@@ -15,22 +16,26 @@
     "email": "jzlocz@gmail.com",
     "url": "https://github.com/jakubzloczewski"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jakubzloczewski/react-steps/issues"
   },
   "homepage": "https://github.com/jakubzloczewski/react-steps#readlsme",
-  "peerDependencies": {
-    "react": ">=0.13"
-  },
   "devDependencies": {
-    "babel-core": "^5.4.7",
-    "babel-loader": "^5.1.3",
-    "node-libs-browser": "^0.5.2",
-    "webpack": "^1.9.8"
-  },
-  "dependencies": {
-    "radium": "^0.12.2"
+    "babel-core": "6.17.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-react": "6.16.0",
+    "babel-preset-stage-0": "6.16.0",
+    "classnames": "2.2.5",
+    "css-loader": "0.25.0",
+    "less": "2.7.1",
+    "less-loader": "2.2.3",
+    "lodash": "4.16.3",
+    "react": "15.3.2",
+    "react-dom": "15.3.2",
+    "style-loader": "0.13.1",
+    "webpack": "1.13.2"
   },
   "readme": "# react-steps\r\nSteps component for react\r\n\r\nDemo : http://jakubzloczewski.github.io/react-steps/\r\n\r\n## Instructions\r\n\r\nTo install this module run:\r\n```sh\r\nnpm install react-steps\r\n```\r\n\r\nrequire it inside of your app\r\n```js\r\nvar Steps = require('react-steps');\r\n```\r\n\r\nto compile example with webpack\r\n\r\n```sh\r\nwebpack\r\n```\r\n\r\nTu run example localy just open ./example/index.html in browser\r\n",
   "readmeFilename": "README.md",

@@ -1,7 +1,8 @@
 "use strict";
 
 import React from 'react';
-import Steps from './../lib/index.js';
+import {render} from 'react-dom';
+import Steps from 'react-steps';
 
 var json = [
     {
@@ -58,6 +59,7 @@ class Code extends React.Component {
 class App extends React.Component {
     render() {
         const {data} = this.props;
+
         return (
             <div>
                 <Example>
@@ -94,4 +96,4 @@ class App extends React.Component {
     }
 }
 
-React.render(<App data={json}/>, document.getElementById("app"));
+render(<App data={json}/>, document.getElementById("app"));

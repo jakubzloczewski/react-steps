@@ -1,23 +1,23 @@
 /*global module, process*/
 "use strict";
 var webpack = require('webpack');
-
-var dev = process.env.NODE_ENV === 'development';
+var path = require('path');
 
 module.exports = {
-    devtool: dev ? '#eval-cheap-module-source-map' : null,
-    entry: './lib/index.js',
+    devtool: '#eval-cheap-module-source-map',
+    entry: './example/main.js',
     output: {
-        path: './dist/',
-        filename: 'react-steps.js',
-        libraryTarget: 'umd'
+        path: './example/dist/',
+        filename: 'bundle.js',
     },
-    externals: {
-        'react': 'react'
+    resolve: {
+        alias: {
+            'react-steps': path.resolve(__dirname, 'dist/react-steps.js')
+        }
     },
     plugins: [
         new webpack.SourceMapDevToolPlugin({
-            filename: 'react-steps.js.map'
+            filename: 'bundle.js.map'
         }),
         new webpack.optimize.UglifyJsPlugin({
             exclude: /node_modules/,
@@ -29,11 +29,8 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.less$/,
-                loader: 'style!css?modules&localIdentName=' + ( dev ? '[name]__[local]___[hash:base64:5]' : '[hash:base64:5]' ) + '!less'
-            },
-            {
                 test: /\.js$/,
+                exclude: /(node_modules|dist)/,
                 loader: 'babel'
             }
         ]

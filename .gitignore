@@ -27,3 +27,5 @@ build/Release
 node_modules
 
 .idea
+/example/dist/bundle.js.map
+/example/dist/bundle.js
