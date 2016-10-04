@@ -4,8 +4,9 @@
   "description": "Steps component for react",
   "main": "dist/react-steps.js",
   "scripts": {
+    "prepublish": "npm build",
     "build": "webpack",
-    "buildExample": "webpack --config webpack.config.example.js"
+    "buildExample": "NODE_ENV=production webpack --config webpack.config.example.js"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,6 @@
     "css-loader": "0.25.0",
     "less": "2.7.1",
     "less-loader": "2.2.3",
-    "lodash": "4.16.3",
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "style-loader": "0.13.1",

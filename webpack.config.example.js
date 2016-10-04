@@ -4,7 +4,6 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    devtool: '#eval-cheap-module-source-map',
     entry: './example/main.js',
     output: {
         path: './example/dist/',
@@ -16,14 +15,13 @@ module.exports = {
         }
     },
     plugins: [
-        new webpack.SourceMapDevToolPlugin({
-            filename: 'bundle.js.map'
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'dev')
         }),
         new webpack.optimize.UglifyJsPlugin({
-            exclude: /node_modules/,
             compress: {warnings: false},
-            sourceMap: true,
-            mangle: false
+            sourceMap: false,
+            mangle: true
         })
     ],
     module: {
