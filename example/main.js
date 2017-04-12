@@ -68,6 +68,12 @@ class App extends React.Component {
                 </Example>
 
                 <Example>
+                    <Code>{'<Steps items={data} styles={{main: {fontFamily: "Comic Sans"}, doneItem: {background: "#AAA"}}}/>'}</Code>
+                    <Steps items={data} 
+                           styles={{main: {fontFamily: "Courier"}, doneItem: {background: "#AAA"}}}/>
+                </Example>
+
+                <Example>
                     <Code>{"<Steps items={data} flat={true}/>"}</Code>
                     <Steps items={data} flat={true}/>
                 </Example>
