@@ -24,6 +24,12 @@ var json = [
         "text": "Unfinished step",
         "isActive": false,
         "isDone": false
+    },
+    {
+        "text": "Step with custom count",
+        "count": 19,
+        "isActive": false,
+        "isDone": false
     }
 ];
 
@@ -69,7 +75,7 @@ class App extends React.Component {
 
                 <Example>
                     <Code>{'<Steps items={data} styles={{main: {fontFamily: "Comic Sans"}, doneItem: {background: "#AAA"}}}/>'}</Code>
-                    <Steps items={data} 
+                    <Steps items={data}
                            styles={{main: {fontFamily: "Courier"}, doneItem: {background: "#AAA"}}}/>
                 </Example>
 
