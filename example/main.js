@@ -30,6 +30,12 @@ var json = [
         "count": 19,
         "isActive": false,
         "isDone": false
+    },
+    {
+        "text": "Another Step with custom count",
+        "count": 0,
+        "isActive": false,
+        "isDone": false
     }
 ];
 

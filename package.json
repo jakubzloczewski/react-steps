@@ -1,7 +1,7 @@
 {
-  "name": "react-steps",
-  "version": "0.0.6",
-  "description": "Steps component for react",
+  "name": "react-steps-custom-count",
+  "version": "0.0.1",
+  "description": "Steps component for react with option to add custom count",
   "main": "dist/react-steps.js",
   "scripts": {
     "prepublish": "npm build",
@@ -12,16 +12,21 @@
     "type": "git",
     "url": "git+https://github.com/jakubzloczewski/react-steps.git"
   },
-  "author": {
+  "contributors": [{
     "name": "Jakub Złoczewski",
     "email": "jzlocz@gmail.com",
     "url": "https://github.com/jakubzloczewski"
   },
+  {
+    "name": "Ben Flowers",
+    "email": "ben.j.flowers@gmail.com",
+    "url": "https://github.com/benoj"
+    }],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jakubzloczewski/react-steps/issues"
+    "url": "https://github.com/benoj/react-steps/issues"
   },
-  "homepage": "https://github.com/jakubzloczewski/react-steps#readlsme",
+  "homepage": "https://github.com/benoj/react-steps#readlsme",
   "devDependencies": {
     "babel-core": "6.17.0",
     "babel-loader": "6.2.5",
